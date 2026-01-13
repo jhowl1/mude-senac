@@ -1,0 +1,99 @@
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(270deg, #89f7fe, #66a6ff);
+      background-size: 400% 400%;
+      animation: gradientShift 20s ease infinite;
+      color: #fff;
+      text-align: center;
+      transition: background 2s;
+      padding: 10px;
+    }
+    .container {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+    .output, .summary {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .card {
+      border-radius: 12px;
+      padding: 15px;
+      margin: 10px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: slideUp 0.6s ease forwards;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+    .card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.2em;
+      color: #ffe;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 1em;
+    }
+    .card.vida { background: rgba(255, 150, 150, 0.2); border-left: 5px solid #ff9a9e; }
+    .card.trabalho { background: rgba(150, 200, 255, 0.2); border-left: 5px solid #66a6ff; }
+    .card.pessoal { background: rgba(150, 255, 180, 0.2); border-left: 5px solid #96e6a1; }
+
+    button {
+      margin: 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #ffffff33;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+      max-width: 250px;
+    }
+    button:hover {
+      background: #ffffff55;
+    }
+    input {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+      max-width: 400px;
+    }
+    #counter {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 📱 Ajustes para telas menores */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5em; }
+      .card { padding: 10px; }
+      .card h3 { font-size: 1.1em; }
+      .card p { font-size: 0.95em; }
+      button { font-size: 0.95em; }
+    }

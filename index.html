@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mude - Interativo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mude</h1>
+    <p>Selecione os tópicos de mudança:</p>
+    <div>
+      <button onclick="choose('vida')">Mudança na vida</button>
+      <button onclick="choose('trabalho')">Mudança no trabalho</button>
+      <button onclick="choose('pessoal')">Mudança pessoal</button>
+    </div>
+
+    <p id="counter">Você ainda não selecionou nenhuma mudança.</p>
+
+    <div class="output" id="output"></div>
+
+    <button onclick="showSummary()">Ver resumo da jornada</button>
+    <div class="summary" id="summary"></div>
+
+    <input id="reflection" type="text" placeholder="Escreva sua reflexão aqui...">
+    <p id="feedback"></p>
+  </div>
+<script src="./script.js"></script>
+
+</body>
+</html>
